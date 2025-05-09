@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Awesome Web Effects Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Scroll Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transition: opacity 0.6s ease-out;
+    }
+
+    .reveal.active {
+      opacity: 1;
+    }
+
+    /* Sliding Text Animation */
+    .slide-text {
+      transform: translateX(100%);
+      transition: transform 1s ease-out;
+    }
+
+    .slide-text.active {
+      transform: translateX(0);
+    }
+
+    /* Flip Card */
+    .flip-card-inner {
+      transition: transform 0.6s;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-green-400 to-teal-400 text-white font-poppins">
+
+  <h1 class="text-4xl text-center mt-10 mb-8">🎨 Awesome Web Effects Gallery</h1>
+
+  <div class="container mx-auto px-4">
+    <!-- Hover Button Effect -->
+    <section class="effect-section my-8">
+      <h2 class="text-2xl mb-4">1. Hover Button Effect</h2>
+      <button class="hover-btn px-6 py-3 bg-transparent border-2 border-white text-white transition-all duration-300 ease-in-out transform hover:bg-white hover:text-teal-600 hover:scale-110">Hover Me</button>
+      <div class="code-box mt-4 bg-gray-800 text-white p-4 rounded-lg">
+        <pre><code class="html">&lt;button class="hover-btn"&gt;Hover Me&lt;/button&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Typing Text Animation -->
+    <section class="effect-section my-8">
+      <h2 class="text-2xl mb-4">2. Typing Text Animation</h2>
+      <div class="typing-text text-xl" id="typing"></div>
+      <div class="code-box mt-4 bg-gray-800 text-white p-4 rounded-lg">
+        <pre><code class="html">&lt;div id="typing"&gt;&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Glassmorphism Card -->
+    <section class="effect-section my-8">
+      <h2 class="text-2xl mb-4">3. Glassmorphism Card</h2>
+      <div class="glass-card bg-white bg-opacity-20 p-8 rounded-lg backdrop-blur-lg">
+        <h3 class="text-xl font-bold">Hello, Developer!</h3>
+        <p class="text-base">This is a beautiful glass effect card.</p>
+      </div>
+      <div class="code-box mt-4 bg-gray-800 text-white p-4 rounded-lg">
+        <pre><code class="html">&lt;div class="glass-card"&gt;&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Neon Glowing Text -->
+    <section class="effect-section my-8">
+      <h2 class="text-2xl mb-4">4. Neon Glowing Text</h2>
+      <h3 class="neon-text text-4xl font-bold text-center">Glowing Neon</h3>
+      <div class="code-box mt-4 bg-gray-800 text-white p-4 rounded-lg">
+        <pre><code class="html">&lt;h3 class="neon-text"&gt;Glowing Neon&lt;/h3&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Flip Card -->
+    <section class="effect-section my-8">
+      <h2 class="text-2xl mb-4">5. Flip Card</h2>
+      <div class="flip-card relative w-full max-w-xs mx-auto">
+        <div class="flip-card-inner relative w-full h-full transition-all duration-500 transform hover:rotate-y-180">
+          <div class="flip-card-front absolute top-0 left-0 w-full h-full bg-blue-500 text-white flex items-center justify-center text-2xl">
+            Front
+          </div>
+          <div class="flip-card-back absolute top-0 left-0 w-full h-full bg-red-500 text-white flex items-center justify-center text-2xl">
+            Back
+          </div>
+        </div>
+      </div>
+      <div class="code-box mt-4 bg-gray-800 text-white p-4 rounded-lg">
+        <pre><code class="html">&lt;div class="flip-card"&gt;&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Bouncing Loader -->
+    <section class="effect-section my-8">
+      <h2 class="text-2xl mb-4">6. Bouncing Loader</h2>
+      <div class="loader mx-auto w-10 h-10 bg-white rounded-full animate-bounce"></div>
+      <div class="code-box mt-4 bg-gray-800 text-white p-4 rounded-lg">
+        <pre><code class="html">&lt;div class="loader"&gt;&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Scroll Reveal -->
+    <section class="effect-section my-8">
+      <h2 class="text-2xl mb-4">7. Scroll Reveal</h2>
+      <div class="reveal text-lg p-4 bg-gray-700 rounded-lg w-full max-w-xl mx-auto">This content appears on scroll!</div>
+      <div class="code-box mt-4 bg-gray-800 text-white p-4 rounded-lg">
+        <pre><code class="html">&lt;div class="reveal"&gt;This content appears on scroll!&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Pulse Animation -->
+    <section class="effect-section my-8">
+      <h2 class="text-2xl mb-4">8. Pulse Animation</h2>
+      <div class="pulse-circle w-16 h-16 bg-red-500 rounded-full mx-auto animate-pulse"></div>
+      <div class="code-box mt-4 bg-gray-800 text-white p-4 rounded-lg">
+        <pre><code class="html">&lt;div class="pulse-circle"&gt;&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Responsive Grid Hover -->
+    <section class="effect-section my-8">
+      <h2 class="text-2xl mb-4">9. Responsive Grid Hover</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        <div class="grid-item bg-gray-600 text-white p-8 text-center">1</div>
+        <div class="grid-item bg-gray-600 text-white p-8 text-center">2</div>
+        <div class="grid-item bg-gray-600 text-white p-8 text-center">3</div>
+      </div>
+      <div class="code-box mt-4 bg-gray-800 text-white p-4 rounded-lg">
+        <pre><code class="html">&lt;div class="grid"&gt;&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Sliding Text Reveal -->
+    <section class="effect-section my-8">
+      <h2 class="text-2xl mb-4">10. Sliding Text Reveal</h2>
+      <div class="slide-text transform translate-x-full text-lg p-4 bg-gray-700 rounded-lg w-full max-w-xl mx-auto">Sliding In Smoothly!</div>
+      <div class="code-box mt-4 bg-gray-800 text-white p-4 rounded-lg">
+        <pre><code class="html">&lt;div class="slide-text"&gt;Sliding In Smoothly!&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Dark Mode Toggle -->
+    <section class="effect-section my-8">
+      <h2 class="text-2xl mb-4">11. Dark Mode Toggle</h2>
+      <button id="toggleDark" class="bg-teal-500 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-teal-700">Toggle Dark Mode</button>
+      <div class="code-box mt-4 bg-gray-800 text-white p-4 rounded-lg">
+        <pre><code class="html">&lt;button id="toggleDark"&gt;Toggle Dark Mode&lt;/button&gt;</code></pre>
+      </div>
+    </section>
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
